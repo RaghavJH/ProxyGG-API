@@ -36,4 +36,4 @@ string proxiesInJson = proxyggApi.GetRawProxiesAsync(ProxyType.HTTPS, 100, Forma
 Console.WriteLine(proxiesInJson);
 ```
 ## Known Issues
-There are no known issues as of yet.
+There are no known issues as yet.
