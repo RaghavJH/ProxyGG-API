@@ -54,9 +54,6 @@ namespace ProxyGG
 
         public async Task<LinkedList<string>> GetProxiesAsync(ProxyType proxyType, int quantity, string country = null)
         {
-
-            ensureQuantity(quantity);
-
             LinkedList<string> proxies = new LinkedList<string>();
 
             string rawProxies = await GetRawProxiesAsync(proxyType, quantity, Format.DOM, country);
