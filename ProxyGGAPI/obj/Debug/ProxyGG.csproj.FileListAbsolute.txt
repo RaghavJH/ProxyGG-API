@@ -1,0 +1,6 @@
+C:\Users\ragha\source\repos\ProxyGGAPI\ProxyGGAPI\bin\Debug\ProxyGGAPI.dll
+C:\Users\ragha\source\repos\ProxyGGAPI\ProxyGGAPI\bin\Debug\ProxyGGAPI.pdb
+C:\Users\ragha\source\repos\ProxyGGAPI\ProxyGGAPI\obj\Debug\ProxyGG.csproj.CoreCompileInputs.cache
+C:\Users\ragha\source\repos\ProxyGGAPI\ProxyGGAPI\obj\Debug\ProxyGGAPI.dll
+C:\Users\ragha\source\repos\ProxyGGAPI\ProxyGGAPI\obj\Debug\ProxyGGAPI.pdb
+C:\Users\ragha\source\repos\ProxyGGAPI\ProxyGGAPI\obj\Debug\ProxyGG.csprojAssemblyReference.cache
