@@ -1,4 +1,4 @@
-# ProxyGG-C#-API
+# ProxyGG-CSharp-API
 A C# wrapper for the ProxyGG API (https://proxy.gg)
 ### Download
 Download the dll from GitHub over [here](https://github.com/RaghavJH/ProxyGG-API/blob/master/ProxyGGAPI/bin/Debug/ProxyGGAPI.dll)
