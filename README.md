@@ -27,7 +27,7 @@ An example of getting the raw proxies (i.e. straight from the API, without any a
 ProxyGGAPI proxyggApi = new ProxyGGAPI("your_api_key_here");
 //Get raw proxies and print
 //Can be Format.DOM or Format.TABLE too.
-string proxiesInJson = proxyggApi.GetRawProxiesAsync(ProxyType.HTTPS, 1001, Format.JSON).Result;
+string proxiesInJson = proxyggApi.GetRawProxiesAsync(ProxyType.HTTPS, 100, Format.JSON).Result;
 //Print the proxies
 Console.WriteLine(proxiesInJson);
 ```
