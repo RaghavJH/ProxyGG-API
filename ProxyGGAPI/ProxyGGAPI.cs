@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -54,6 +54,8 @@ namespace ProxyGG
 
         public async Task<LinkedList<string>> GetProxiesAsync(ProxyType proxyType, int quantity, string country = null)
         {
+
+            ensureQuantity(quantity);
 
             LinkedList<string> proxies = new LinkedList<string>();
 
