@@ -12,6 +12,8 @@ ProxyGGAPI proxyggApi = new ProxyGGAPI("your_api_key_here");
 /* Received parsed proxies (parsed into a LinkedList) */
 //Get a list of proxies
 LinkedList<string> proxies = proxyggApi.GetProxiesAsync(ProxyType.HTTPS, 100).Result;
+//You can also supply a country code
+//LinkedList<string> proxies = proxyggApi.GetProxiesAsync(ProxyType.HTTPS, 100, "US").Result;
 //Print every proxy
 foreach(string proxy in proxies)
 {
@@ -28,6 +30,8 @@ ProxyGGAPI proxyggApi = new ProxyGGAPI("your_api_key_here");
 //Get raw proxies and print
 //Can be Format.DOM or Format.TABLE too.
 string proxiesInJson = proxyggApi.GetRawProxiesAsync(ProxyType.HTTPS, 100, Format.JSON).Result;
+//You can also supply a country code
+//string proxiesInJson = proxyggApi.GetRawProxiesAsync(ProxyType.HTTPS, 100, Format.JSON, "US").Result;
 //Print the proxies
 Console.WriteLine(proxiesInJson);
 ```
