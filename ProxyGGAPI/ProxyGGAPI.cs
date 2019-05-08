@@ -55,20 +55,20 @@ namespace ProxyGG
         /// </summary>
         /// <param name="proxyType">
         /// The type of proxy, e.g. ProxyType.HTTPS
-        /// This method may throw an InvalidProxyTypeException, so handle accordingly. 
         /// </param>
         /// <param name="quantity">
         /// The number of proxies constrained between 1 and 1000.
-        /// This method may throw a QuantityOutOfBoundsException, so handle accordingly. 
         /// </param>
         /// <param name="format">
         /// The format to receive the proxies in, e.g. Format.JSON
-        /// This method may throw an InvalidFormatException, so handle accordingly.
         /// </param>
         /// <param name="country">
         /// Optional parameter. Will filter the proxies by 2-letter country code specified.
         /// If an invalid country code is specified, response will be empty.
         /// </param>
+        /// <exception cref="InvalidProxyTypeException"></exception>
+        /// <exception cref="QuantityOutOfBoundsException"></exception>
+        /// <exception cref="InvalidFormatException"></exception>
         /// <returns>The proxies as a string</returns>
         public async Task<string> GetRawProxiesAsync(ProxyType proxyType, int quantity, Format format, string country = null)
         {
@@ -90,16 +90,16 @@ namespace ProxyGG
         /// </summary>
         /// <param name="proxyType">
         /// The type of proxy, e.g. ProxyType.HTTPS
-        /// This method may throw an InvalidProxyTypeException, so handle accordingly. 
         /// </param>
         /// <param name="quantity">
-        /// The number of proxies constrained between 1 and 1000.
-        /// This method may throw a QuantityOutOfBoundsException, so handle accordingly. 
+        /// The number of proxies constrained between 1 and 1000. 
         /// </param>
         /// <param name="country">
         /// Optional parameter. Will filter the proxies by 2-letter country code specified.
         /// If an invalid country code is specified, response will be empty.
         /// </param>
+        /// <exception cref="InvalidProxyTypeException"></exception>
+        /// <exception cref="QuantityOutOfBoundsException"></exception>
         /// <returns>A LinkedList of strings with each proxy in format ip:port</returns>
         public async Task<LinkedList<string>> GetProxiesAsync(ProxyType proxyType, int quantity, string country = null)
         {
@@ -152,6 +152,7 @@ namespace ProxyGG
         /// Evaluates the proxy type from an enum to a string
         /// </summary>
         /// <param name="proxyType">The type of proxy as an enum object</param>
+        /// <exception cref="InvalidProxyTypeException"></exception>
         /// <returns>The proxy type string that fits the API parameter</returns>
         private string GetProxyType(ProxyType proxyType)
         {
@@ -171,9 +172,10 @@ namespace ProxyGG
         }
 
         /// <summary>
-        /// Makes sure the quantity entered is within bounds. Throws QuantityOutOfBoundsException.
+        /// Makes sure the quantity entered is within bounds.
         /// </summary>
         /// <param name="quantity">The quantity entered by the user</param>
+        /// <exception cref="QuantityOutOfBoundsException"></exception>
         private void ensureQuantity(int quantity)
         {
             if(quantity < 1 || quantity > 1000)
