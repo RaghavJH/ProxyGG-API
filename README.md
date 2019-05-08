@@ -3,7 +3,7 @@ A C# wrapper for the ProxyGG API (https://proxy.gg)
 ### Download
 Download the dll from GitHub over [here](https://github.com/RaghavJH/ProxyGG-API/blob/master/ProxyGGAPI/bin/Debug/ProxyGGAPI.dll)
 ### How To Implement
-The API supports asynchronous calls, but for the examples, all the code presented will be synchronous.__
+The API supports asynchronous calls, but for the examples, all the code presented will be synchronous.<br>
 You are expected to handle ALL exceptions (custom exceptions within the API and network-related exceptions)
 ### Example
 An example of getting the proxies as a list of strings (LinkedList)
